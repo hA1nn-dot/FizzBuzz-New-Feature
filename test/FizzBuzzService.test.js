@@ -18,5 +18,17 @@ describe("Check FizzBuzz functionality", () => {
         const explorerValidation = FizzBuzzService.applyValidationinExplorers(explorers);
         expect(explorerValidation).toEqual([{name: "explorer1", trick: "FIZZBUZZ", score: 15}]);
     });
+
+    test("4) FizzBuzz testing with a number as a parameter", () => {
+        const correctValue = "FIZZBUZZ";
+        const validation = FizzBuzzService.applyValidationInNumber(15);
+        expect(validation).toBe(correctValue);
+    });
+
+    test("5) FizzBuzz testing returning the number", () => {
+        const correctValue = 1;
+        const validation = FizzBuzzService.applyValidationInNumber(1);
+        expect(validation).toBe(correctValue);
+    });
 });
 
